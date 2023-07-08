@@ -12,7 +12,7 @@
   },
   "include": [
     "api/**/*.ts",
-    "nightwatch/**/*.ts",
+    "jest.config.ts"
   ],
   "exclude": [
     "node_modules",
