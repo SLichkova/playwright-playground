@@ -1,7 +1,7 @@
 # playwright-playground
 
-to run ui test used command:
+to run ui test used the command:
 npx playwright test --ui
 
-to run api test used command:
+to run API test used the command:
 npx jest api/test-suites/test.api.ts 
