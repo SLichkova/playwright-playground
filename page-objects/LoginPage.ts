@@ -22,21 +22,25 @@ export class LoginPage extends BasePage {
   }
 
   public async acceptAllCookies() {
-    await this.loginSelectors.acceptAllCookies.click();
+    await this.page.locator(`css=${this.loginSelectors.acceptAllCookies}`).click();
   }
 
   public async navigateToLoginScreen() {
-    await this.loginSelectors.loginButton.click();
+    await this.page.locator(`css=${this.loginSelectors.loginButton}`).click()
   }
 
   public async submitLoginWithParameters( username: string, password: string) {
-   await this.loginSelectors.usernameInput().fill(username);
-   await this.loginSelectors.passwordInput().fill(password);
-   await this.loginSelectors.submitButton().click();
+   await this.page.locator(`css=${this.loginSelectors.usernameInput}`).click();
+   await this.page.locator(`css=${this.loginSelectors.usernameInput}`).fill(username);
+
+   await this.page.locator(`css=${this.loginSelectors.passwordInput}`).click();
+   await this.page.locator(`css=${this.loginSelectors.passwordInput}`).fill(password);
+
+   await this.page.locator(`css=${this.loginSelectors.submitButton}`).click();
   }
 
   public async assertUserIsLoggedIn() {
-    
+    await this.page.locator(`css=${this.loginSelectors.pageTitleAfterLogin}`).textContent();
   }
 
 }

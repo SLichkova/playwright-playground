@@ -1,4 +1,21 @@
 export const campaigns = {
-  downloadChampaigns: "",
-  createCampaign: "",
+  downloadChampaigns: `div[class="lp-btn-content"] span[class="text"]`,
+  createCampaignMainPage: `#buttonCreateCampaign > div > span`,
+  campaignName: `div.campaign-create-props > div > div.lp-legend-wrapper-content > input`,
+  createCampaignSubmitButton: `button[data-testid="campaign-create-button"]`,
+  cancelButton: `button[data-testid="modal-close-button"]`,
+  pushNotificationTitle: `div.action-create-panel > div.action-create-panel-templates > div > a > div.title`,
+  addPushMessage:`div[class="text-field-view"] input[name="Message"]`,
+  // set campaign selectors 
+  labelMessage: ``,
+  labelAudience: ``,
+  labelDelivery: `div[class="step-label"] a[href="#delivery"]`,
+  sectionDelivery: `#delivery`,
+  optionsItemRecurring: `#delivery > div.content > div > div > div.type.content > div > div > div > div:nth-child(2)`,
+  scheduleViewEndLabel: `div.recurrence-picker > div:nth-child(7)`,
+  optionalFinishOn: ``,
+  optionalFinishAfter: `li.dropdown-item.selected.unlimited-width`,
+  occurrences: `div:nth-child(3) > label > input`,
+  buttonReviewAndPublish: `div.navigation-bar-controls > div.composer-summary-controls > button > div > span`,
+  buttonPublish: `button.lp-button.color-success.normal.enabled.scheduled > div > span`,
 }
